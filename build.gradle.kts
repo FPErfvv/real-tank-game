@@ -5,3 +5,18 @@
  * Learn more about Gradle by exploring our Samples at https://docs.gradle.org/9.2.1/samples
  * This project uses @Incubating APIs which are subject to change.
  */
+
+plugins {
+    java
+    application
+}
+
+application {
+    mainClass.set("org.tankgame.HelloWorld")
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "org.tankgame.HelloWorld"
+    }
+}
